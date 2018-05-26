@@ -28,18 +28,18 @@
                     <div class="col-xs-12 col-sm-6 align-right">
 
                         @*<div class="switch panel-switch-btn">
-                            <span class="m-r-10 font-12">REAL TIME</span>
-                            <label>OFF<input type="checkbox" id="realtime" checked><span class="lever switch-col-cyan"></span>ON</label>
-                        </div>*@
-                        <button type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float" data-toggle="modal" data-target="#IngredientCreateModal">
+                                <span class="m-r-10 font-12">REAL TIME</span>
+                                <label>OFF<input type="checkbox" id="realtime" checked><span class="lever switch-col-cyan"></span>ON</label>
+                            </div>*@
+                        <button type="button" class="btn bg-@uiTheme btn-circle waves-effect waves-circle waves-float" data-toggle="modal" data-target="#IngredientCreateModal">
                             <i class="material-icons">add</i>
                         </button>
                     </div>
                 </div>
             </div>
             @*<div class="body hidden">
-                <div id="real_time_chart" class="dashboard-flot-chart"></div>
-            </div>*@
+                    <div id="real_time_chart" class="dashboard-flot-chart"></div>
+                </div>*@
         </div>
     </div>
 </div>
@@ -55,17 +55,17 @@
                     <li role="presentation" class="pull-right" style="margin-top: 6px;">
                         <div class="dropdown">
                             <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <i class="material-icons">more_vert</i>
+                                <i class="material-icons" style="color: @uiTheme !important">more_vert</i>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="#" class="waves-effect waves-block edit-ingredient" data-ingredient-id="@item.Id" data-toggle="modal" data-target="#IngredientEditModal">
-                                        <i class="material-icons">create</i>@L("Edit")
+                                    <a href="#" class="waves-effect waves-block edit-ingredient" data-ingredient-id="@item.Id" data-toggle="modal" data-target="#IngredientEditModal" >
+                                        <i class="material-icons" style="color: @uiTheme !important">create</i>@L("Edit")
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="waves-effect waves-block delete-ingredient" data-ingredient-id="@item.Id" data-ingredient-name="@item.Name">
-                                        <i class="material-icons">delete_sweep</i>@L("Delete")
+                                    <a href="#" class="waves-effect waves-block delete-ingredient" data-ingredient-id="@item.Id" data-ingredient-name="@item.Name" >
+                                        <i class="material-icons" style="color: @uiTheme !important">delete_sweep</i>@L("Delete")
                                     </a>
                                 </li>
                             </ul>
@@ -80,7 +80,7 @@
                             <div class="row clearfix" style="margin-top: 10px;">
                                 <div class="col-sm-12">
 
-                                    <dl class="dl-horizontal">
+                                    <dl class="">
                                         <dt>
                                             @L("IngredientName")
                                         </dt>
@@ -93,7 +93,7 @@
                                             @L("IngredientType")
                                         </dt>
 
-                                        <dd>
+                                        <dd class="badge">
                                             @Html.DisplayFor(modelItem => item.Type)
                                         </dd>
                                     </dl>
@@ -120,7 +120,7 @@
                         </div>
                         <div role="tabpanel" class="tab-pane animated fadeIn" id="view-nutrition-facts-@item.Id">
                             <div class="m-b--35 font-bold">
-                                @L("NutritionFacts").ToUpper()
+                                @L("NutritionFacts").ToUpper() <small class="pull-right"><i>per 100 grams</i></small>
                             </div>
 
                             <ul class="dashboard-stat-list">
@@ -214,7 +214,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">@L("Cancel")</button>
-                        <button type="submit" class="btn btn-primary waves-effect">@L("Save")</button>
+                        <button type="submit" class="btn bg-@uiTheme waves-effect">@L("Save")</button>
                     </div>
                 </form>
             </div>

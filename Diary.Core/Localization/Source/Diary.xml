@@ -18,6 +18,7 @@
     <text name="TenancyName" value="Tenancy name" />
     <text name="UserNameOrEmail" value="User name or email" />
     <text name="Password" value="Password" />
+    <text name="ConfirmPassword" value="Confirm password" />
     <text name="RememberMe" value="Remember me" />
     <text name="LogIn" value="Log in" />
 
@@ -83,7 +84,7 @@
     <text name="IngredientList">Ingredients</text>
     <text name="MealList">Meals</text>
     <text name="Units">[units]</text>
-    <text name="IngredientName">Ingredient Name</text>
+    <text name="IngredientName">Name</text>
     <text name="NutritionFacts">Nutrition Facts</text>
 
     <text name="CreateNewMeal">Create New Meal</text>
@@ -118,7 +119,8 @@
     <text name="IngredientDetails">Ingredient Details</text>
     <text name="EditIngredient">Edit Ingredient</text>
     <text name="IngredientFacts">Ingredient Facts</text>
-    <text name="IngredientType">Ingredient Type</text>
+    <text name="IngredientType">Type</text>
     <text name="SelectIngredientType">Select ingredient type</text>
+    <text name="SelectMealType">Select meal type</text>
   </texts>
 </localizationDictionary>

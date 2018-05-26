@@ -19,7 +19,7 @@
 
 <div class="block-header">
     <h2>@L("Meals").ToUpper() DASHBOARD</h2>
-    <button type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" data-toggle="modal" data-target="#MealCreateModal">
+    <button type="button" class="btn bg-@uiTheme btn-circle waves-effect waves-circle waves-float pull-right" data-toggle="modal" data-target="#MealCreateModal">
         <i class="material-icons">add</i>
     </button>
 </div>
@@ -73,15 +73,15 @@
                                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                             <i class="material-icons">menu</i>
                                         </a>
-                                        <ul class="dropdown-menu">
+                                        <ul class="dropdown-menu" style="color: @uiTheme !important;">
                                             <li>
-                                                <a href="#" class="waves-effect waves-block edit-meal" data-meal-id="@meal.Id" data-toggle="modal" data-target="#MealEditModal">
-                                                    <i class="material-icons">create</i>@L("Edit")
+                                                <a href="#" class="waves-effect waves-block edit-meal" data-meal-id="@meal.Id" data-toggle="modal" data-target="#MealEditModal" >
+                                                    <i class="material-icons" style="color: @uiTheme !important;">create</i>@L("Edit")
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#" class="waves-effect waves-block delete-meal" data-meal-id="@meal.Id" data-meal-name="@meal.Name">
-                                                    <i class="material-icons">delete_sweep</i>@L("Delete")
+                                                    <i class="material-icons" style="color: @uiTheme !important;">delete_sweep</i>@L("Delete")
                                                 </a>
                                             </li>
                                         </ul>
@@ -126,12 +126,12 @@
                         }
                     </div> <!-- panel-group -->
 
-                    <button type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" data-toggle="modal" data-target="#MealCreateModal">
+                    <button type="button" class="btn bg-@uiTheme btn-circle waves-effect waves-circle waves-float pull-right" data-toggle="modal" data-target="#MealCreateModal">
                         <i class="material-icons">add</i>
                     </button>
                     @*<div class="panel-footer">
                             Html.ActionLink("Create New", "Create")
-                            <button type="button" data-toggle="modal" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" ng-click="vm.openMealCreationModal()">
+                            <button type="button" data-toggle="modal" class="btn bg-@uiTheme btn-circle waves-effect waves-circle waves-float pull-right" ng-click="vm.openMealCreationModal()">
                                 <i class="material-icons">add</i>
                             </button>
 
@@ -221,7 +221,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">@L("Cancel")</button>
-                        <button type="submit" class="btn btn-primary waves-effect">@L("Save")</button>
+                        <button type="submit" class="btn bg-@uiTheme waves-effect">@L("Save")</button>
                     </div>
                 </form>
             </div>
