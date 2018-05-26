@@ -13,7 +13,7 @@ namespace Diary
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "0.2.0.0";
+        public const string Version = "6.2.0.1";
 
         /// <summary>
         /// Gets release (last build) date of the application.

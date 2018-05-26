@@ -99,7 +99,6 @@
     <text name="DashboardTitleMealTypes">Meal Distribution</text>
 
     <text name="Statistics">Statistics</text>
-    <text name="Refresh">Refresh</text>
     <text name="DashboardTitleNutritionFactTypes">Nutrient Distribution</text>
     <text name="Calories">Calories</text>
     <text name="Carbohydrates">Carbohydrates</text>
@@ -116,7 +115,8 @@
     <text name="DashboardTitleIngredientTypes">Ingredient Distribution</text>
     <text name="Refresh">Refresh</text>
     <text name="CreateNewIngredient">Create New Ingredient</text>
-    <text name="IngredientDetails">Ingredien tDetails</text>
+    <text name="IngredientDetails">Ingredient Details</text>
+    <text name="EditIngredient">Edit Ingredient</text>
     <text name="IngredientFacts">Ingredient Facts</text>
     <text name="IngredientType">Ingredient Type</text>
     <text name="SelectIngredientType">Select ingredient type</text>

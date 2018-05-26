@@ -51,6 +51,13 @@ namespace Diary.Web.Controllers
                 MostUsedIngredients = _countService.GetMostUsedIngredients(6).Items
             };
 
+            // get percentages
+            vm.MealBreakfast = (int) (vm.MealBreakfast * 100f / vm.Meals);
+            vm.MealLunch = (int) (vm.MealLunch * 100f / vm.Meals);
+            vm.MealDinner = (int) (vm.MealDinner * 100f / vm.Meals);
+            vm.MealSnack = (int) (vm.MealSnack * 100f / vm.Meals);
+            vm.MealOther = (int) (vm.MealOther * 100f / vm.Meals);
+
             return View(vm);
         }
     }

@@ -68,32 +68,6 @@ function initSparkline() {
     });
 }
 
-function initDonutChart() {
-    Morris.Donut({
-        element: 'donut_chart',
-        data: [{
-                label: 'Breakfast',
-                value: 37
-            }, {
-                label: 'Lunch',
-                value: 30
-            }, {
-                label: 'Dinner',
-                value: 18
-            }, {
-                label: 'Snack',
-                value: 12
-            },
-            {
-                label: 'Other',
-                value: 3
-            }],
-        colors: ['rgb(233, 30, 99)', 'rgb(0, 188, 212)', 'rgb(255, 152, 0)', 'rgb(0, 150, 136)', 'rgb(96, 125, 139)'],
-        formatter: function (y) {
-            return y + '%'
-        }
-    });
-}
 
 var data = [], totalPoints = 110;
 function getRandomData() {
