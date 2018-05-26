@@ -1,0 +1,321 @@
+﻿@using Abp.Configuration
+@using Abp.Web.Mvc.Extensions
+@using Diary.Configuration
+@using Diary.Domain.Models
+@model Diary.Web.Models.Meals.MealListViewModel
+
+@{
+    ViewBag.ActiveMenu = PageNames.Meals; //The menu item will be active for this page.
+    var uiTheme = SettingManager.GetSettingValue(AppSettingNames.UiTheme);
+
+}
+
+@section scripts
+{
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+
+    @Html.IncludeScript("~/Views/Meals/Index.js")
+}
+
+<div class="block-header">
+    <h2>@L("Meals").ToUpper() DASHBOARD</h2>
+    <button type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" data-toggle="modal" data-target="#MealCreateModal">
+        <i class="material-icons">add</i>
+    </button>
+</div>
+<hr />
+<br />
+<div class="row clearfix">
+    <div class="row">
+        <div class="col-sm-4 center-block"></div>
+        <div class="col-sm-4 center-block">
+
+            <div class="date-picker" data-date="@Model.Day.ToString("yyyy/MM/dd")" data-keyboard="true">
+                <div class="date-container pull-left">
+                    <h4 class="weekday">Monday</h4>
+                    <h2 class="date">Februray 4th</h2>
+                    <h4 class="year pull-right">2014</h4>
+                </div>
+
+                <a href="@Url.Action("Index", "Meals", new { t = Model.Day.AddDays(-1)})">
+                    <span data-toggle="datepicker" data-type="subtract" class="fa fa-angle-left"></span>
+                </a>
+                <a href="@Url.Action("Index", "Meals", new { t = Model.Day.AddDays(1)})">
+                    <span data-toggle="datepicker" data-type="add" class="fa fa-angle-right"></span>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-4 center-block"></div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="card main-content">
+                <div class="header">
+                    <h2>
+                        @L("MealList").ToUpper()
+                    </h2>
+                </div>
+
+                <div class="body" style="padding-bottom: 60px;">
+                    <div class="panel-group" id="accordion">
+                        @foreach (var meal in Model.Meals)
+                        {
+                            <div class="panel panel-default">
+                                <div class="panel-heading clearfix bg-@uiTheme">
+                                    <span class="pull-left badge">@meal.Type</span>
+
+                                    <h4 class="panel-title pull-left" style="padding-top: 7.5px;">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse_@meal.Id">@Html.DisplayFor(modelItem => meal.Name)</a>
+
+                                    </h4>
+                                    <div class="dropdown pull-right">
+                                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                            <i class="material-icons">menu</i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="#" class="waves-effect waves-block edit-meal" data-meal-id="@meal.Id" data-toggle="modal" data-target="#MealEditModal">
+                                                    <i class="material-icons">create</i>@L("Edit")
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="waves-effect waves-block delete-meal" data-meal-id="@meal.Id" data-meal-name="@meal.Name">
+                                                    <i class="material-icons">delete_sweep</i>@L("Delete")
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div id="collapse_@meal.Id" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="header">
+                                            <h2>
+                                                @L("IngredientList").ToUpper()
+                                            </h2>
+                                        </div>
+
+                                        <div class="panel-group">
+                                            @foreach (var ingredient in meal.Ingredients)
+                                            {
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading  bg-@uiTheme">
+                                                        <span class="pull-left badge">@ingredient.Type</span>
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" href="#@string.Format("collapse_{0}_{1}", meal.Id, ingredient.Id)">@ingredient.Name</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="@string.Format("collapse_{0}_{1}", meal.Id, ingredient.Id)" class="panel-collapse collapse">
+                                                        <ul class="list-group">
+                                                            @foreach (var fact in ingredient.NutritionFacts)
+                                                            {
+                                                                <li class="list-group-item">
+                                                                    <span class="pull-right"><b>@fact.Value</b> <small> @((fact.Nutrient == Nutrient.Calories ? NutritionFact.DefaultCaloriesUnit : NutritionFact.DefaultUnit).ToUpper())</small></span>
+                                                                    @fact.Nutrient
+                                                                </li>
+                                                            }
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div> <!-- panel-group -->
+
+                    <button type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" data-toggle="modal" data-target="#MealCreateModal">
+                        <i class="material-icons">add</i>
+                    </button>
+                    @*<div class="panel-footer">
+                            Html.ActionLink("Create New", "Create")
+                            <button type="button" data-toggle="modal" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" ng-click="vm.openMealCreationModal()">
+                                <i class="material-icons">add</i>
+                            </button>
+
+                        </div>*@
+
+                </div> <!-- body -->
+
+
+
+            </div> <!-- card -->
+        </div> <!-- col -->
+
+    </div> <!-- row main -->
+</div>
+
+
+<div class="modal fade" id="MealCreateModal" tabindex="-1" role="dialog" aria-labelledby="MealCreateModalLabel" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <span>@L("CreateNewMeal")</span>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form name="mealCreateForm" role="form" novalidate class="form-validation">
+                    <ul class="nav nav-tabs tab-nav-right" role="tablist">
+                        <li role="presentation" class="active"><a href="#create-meal-details" data-toggle="tab">@L("MealDetails")</a></li>
+                        <li role="presentation"><a href="#create-meal-roles" data-toggle="tab">@L("MealIngredients")</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane animated fadeIn active" id="create-meal-details">
+
+                            <div class="row clearfix" style="margin-top: 10px;">
+                                <div class="col-sm-12">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" name="Name" class="form-control" required>
+                                            <label class="form-label">@L("MealName")</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix" style="margin-top: 10px;">
+                                <div class="col-sm-12">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="date" name="Date" class="form-control" required>
+                                            <label class="form-label">@L("MealDate")</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix" style="margin-top: 10px;">
+                                <div class="col-sm-12">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            @Html.DropDownList("Type",
+                                                EnumHelper.GetSelectList(typeof(MealType)) ,
+                                                L("SelectMealType"),
+                                                new { @class = "form-control", required = true })
+
+                                            @*<input type="text" name="Type" class="form-control" required>
+                                                <label class="form-label">@L("MealType")</label>*@
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane animated fadeIn" id="create-meal-roles">
+                            <div class="row">
+                                <div class="col-sm-12 ">
+                                    @foreach (var ingredient in Model.Ingredients)
+                                    {
+                                        <div class="col-sm-6">
+                                            <input type="checkbox" name="ingredient" data-ingredient-id="@ingredient.Id" data-ingredient-name="@ingredient.Name" title="@ingredient.Name" class="filled-in" id="@string.Format("ingredient_{0}",ingredient.Id)" />
+                                            <label for="@string.Format("ingredient_{0}",ingredient.Id)" title="@ingredient.Name">@ingredient.Name</label>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">@L("Cancel")</button>
+                        <button type="submit" class="btn btn-primary waves-effect">@L("Save")</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="MealEditModal" tabindex="-1" role="dialog" aria-labelledby="MealEditModalLabel" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+        </div>
+    </div>
+</div>
+
+
+@*<div class="input-group input-datepicker">
+        <input type="text" class="form-control" data-format="YYYY/MM/DD" placeholder="YYYY/MM/DD">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+        </span>
+    </div>
+    <span data-toggle="calendar" class="fa fa-calendar"></span>*@
+
+<style>
+    @@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+
+    .fa.pull-right {
+        margin-left: 0.1em;
+    }
+
+    .date-picker,
+    .date-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        color: rgb(75, 77, 78);
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .date-container {
+        padding: 0px 40px;
+    }
+
+    .date-picker h2, .date-picker h4 {
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 200;
+    }
+
+    .date-container .date {
+        text-align: center;
+    }
+
+    .date-picker span.fa {
+        position: absolute;
+        font-size: 4em;
+        font-weight: 100;
+        padding: 8px 0px 7px;
+        cursor: pointer;
+        top: 0px;
+    }
+
+        .date-picker span.fa[data-type="subtract"] {
+            left: 0px;
+        }
+
+        .date-picker span.fa[data-type="add"] {
+            right: 0px;
+        }
+
+    .date-picker span[data-toggle="calendar"] {
+        display: block;
+        position: absolute;
+        top: -7px;
+        right: 45px;
+        font-size: 1em !important;
+        cursor: pointer;
+    }
+
+    .date-picker .input-datepicker {
+        display: none;
+        position: absolute;
+        top: 50%;
+        margin-top: -17px;
+        width: 100%;
+    }
+
+        .date-picker .input-datepicker.show-input {
+            display: table;
+        }
+</style>

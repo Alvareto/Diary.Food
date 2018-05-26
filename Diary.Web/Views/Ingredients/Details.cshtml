@@ -1,0 +1,82 @@
+﻿@model Diary.Domain.Models.Ingredient
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ingredient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDeleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDeleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeleterUserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeleterUserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeletionTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeletionTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastModificationTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastModificationTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastModifierUserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastModifierUserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreationTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatorUserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatorUserId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
