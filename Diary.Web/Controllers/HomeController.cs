@@ -1,5 +1,4 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Abp.Timing;
 using Abp.Web.Mvc.Authorization;
 using Diary.Domain;
@@ -43,11 +42,14 @@ namespace Diary.Web.Controllers
                 MealYesterday = _countService.GetCountMeals(Clock.Now.Date.AddDays(-1)).TotalCount,
                 MealLastWeek = _countService.GetCountMeals(Clock.Now.Date.AddDays(-7)).TotalCount,
                 MealLastMonth = _countService.GetCountMeals(Clock.Now.Date.AddMonths(-1)).TotalCount,
+
+                TotalCalories = _countService.GetCountNutritionFactType(Nutrient.Calories).TotalCount,
+                TotalCarbs = _countService.GetCountNutritionFactType(Nutrient.Carbohydrates).TotalCount,
+                TotalFat = _countService.GetCountNutritionFactType(Nutrient.Fat).TotalCount,
+                TotalProtein = _countService.GetCountNutritionFactType(Nutrient.Protein).TotalCount,
+
+                MostUsedIngredients = _countService.GetMostUsedIngredients(6).Items
             };
-
-            //var MealTypes = Enum.GetValues(typeof(MealType));
-
-            //ViewData["MealTypes"] = new SelectList(MealTypes);
 
             return View(vm);
         }

@@ -1,15 +1,6 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Web.Mvc;
-using Abp.Application.Services;
 using Abp.Application.Services.Dto;
-using Abp.Dependency;
-using Abp.Events.Bus.Exceptions;
-using Abp.Events.Bus.Handlers;
-using Abp.UI;
 using Abp.Web.Mvc.Authorization;
 using Diary.Authorization;
 using Diary.Authorization.Roles;

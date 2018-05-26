@@ -8,24 +8,11 @@ using Abp.Domain.Repositories;
 using Abp.IdentityFramework;
 using Abp.Runtime.Session;
 using Diary.Authorization.Users;
-using Diary.Domain.Models;
 using Diary.MultiTenancy;
-using Diary.Users;
 using Microsoft.AspNet.Identity;
 
 namespace Diary
 {
-    public interface IDiaryAppService<TEntityDto>
-        : IAsyncCrudAppService<TEntityDto> where TEntityDto : IEntityDto
-    {
-
-    }
-
-    public interface IDiaryAppService : IApplicationService
-    {
-
-    }
-
     /// <summary>
     /// Derive your application services from this class.
     /// </summary>
@@ -47,7 +34,7 @@ namespace Diary
             {
                 throw new ApplicationException("There is no current user!");
             }
-            
+
             return user;
         }
 

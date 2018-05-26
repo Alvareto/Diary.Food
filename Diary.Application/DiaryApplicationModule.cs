@@ -1,9 +1,7 @@
 ﻿using System.Reflection;
 using Abp.Authorization;
 using Abp.Authorization.Roles;
-using Abp.Authorization.Users;
 using Abp.AutoMapper;
-using Abp.Domain.Repositories;
 using Abp.Modules;
 using Diary.Authorization.Roles;
 using Diary.Authorization.Users;

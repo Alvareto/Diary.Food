@@ -13,7 +13,6 @@ using Diary.Authorization.Users;
 using Diary.EntityFramework;
 using Diary.Migrations.SeedData;
 using Diary.MultiTenancy;
-using Diary.Users;
 using Castle.MicroKernel.Registration;
 using Effort;
 using EntityFramework.DynamicFilters;

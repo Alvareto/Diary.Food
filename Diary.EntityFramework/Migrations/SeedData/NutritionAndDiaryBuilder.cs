@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Diary.Domain.Models;
 using Diary.EntityFramework;
-using Diary.MultiTenancy;
 
 namespace Diary.Migrations.SeedData
 {

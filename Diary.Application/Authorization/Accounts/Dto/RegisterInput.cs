@@ -2,7 +2,6 @@
 using System.ComponentModel.DataAnnotations;
 using Abp.Auditing;
 using Abp.Authorization.Users;
-using Diary.Users;
 using Diary.Validation;
 using Abp.Extensions;
 using Diary.Authorization.Users;

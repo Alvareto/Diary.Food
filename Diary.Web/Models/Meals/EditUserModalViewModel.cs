@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Diary.Domain;
+using Diary.Domain.Dto;
 
 namespace Diary.Web.Models.Meals
 {

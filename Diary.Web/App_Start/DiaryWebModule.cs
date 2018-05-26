@@ -3,15 +3,12 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using Abp.Hangfire;
-using Abp.Hangfire.Configuration;
 using Abp.Zero.Configuration;
 using Abp.Modules;
 using Abp.Web.Mvc;
 using Abp.Web.SignalR;
 using Diary.Api;
 using Castle.MicroKernel.Registration;
-using Hangfire;
 using Microsoft.Owin.Security;
 
 namespace Diary.Web

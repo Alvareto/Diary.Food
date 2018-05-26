@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using Diary.Domain;
-using Diary.Roles.Dto;
+﻿using System.Collections.Generic;
+using Diary.Domain.Dto;
 
 namespace Diary.Web.Models.Ingredients
 {

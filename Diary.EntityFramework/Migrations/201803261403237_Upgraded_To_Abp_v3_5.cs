@@ -1,6 +1,5 @@
 namespace Diary.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
     
     public partial class Upgraded_To_Abp_v3_5 : DbMigration

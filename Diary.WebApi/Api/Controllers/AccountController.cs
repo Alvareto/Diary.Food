@@ -10,7 +10,6 @@ using Diary.Api.Models;
 using Diary.Authorization;
 using Diary.Authorization.Users;
 using Diary.MultiTenancy;
-using Diary.Users;
 using Microsoft.Owin.Infrastructure;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.OAuth;

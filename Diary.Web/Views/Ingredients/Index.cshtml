@@ -15,16 +15,35 @@
     @Html.IncludeScript("~/Views/Ingredients/Index.js")
 }
 
+<div class="row clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+            <div class="header">
+                <div class="row clearfix">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="block-header">
+                            <h2>@L("Ingredients").ToUpper() DASHBOARD</h2>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 align-right">
 
-<div class="block-header">
-    <h2>@L("Ingredients").ToUpper() DASHBOARD</h2>
-
-    <button type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" data-toggle="modal" data-target="#IngredientCreateModal">
-        <i class="material-icons">add</i>
-    </button>
+                        @*<div class="switch panel-switch-btn">
+                            <span class="m-r-10 font-12">REAL TIME</span>
+                            <label>OFF<input type="checkbox" id="realtime" checked><span class="lever switch-col-cyan"></span>ON</label>
+                        </div>*@
+                        <button type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float" data-toggle="modal" data-target="#IngredientCreateModal">
+                            <i class="material-icons">add</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            @*<div class="body hidden">
+                <div id="real_time_chart" class="dashboard-flot-chart"></div>
+            </div>*@
+        </div>
+    </div>
 </div>
-<hr />
-<br />
+
 <div class="row clearfix">
     @foreach (var item in Model.Ingredients)
     {
@@ -182,7 +201,7 @@
                                         <div class="form-group form-float">
                                             <div class="input-group form-line">
                                                 <div class="input-group-addon">@fact.Nutrient</div>
-                                                <input type="number" placeholder="@fact.Nutrient" name="fact" data-fact-id="@fact.Id" data-fact-name="@fact.Nutrient" title="@fact.Nutrient" class="form-control" id="@string.Format("fact_{0}", fact.Id)" min="0" />
+                                                <input type="number" placeholder="@fact.Nutrient" name="fact" value="0" data-fact-id="@fact.Id" data-fact-name="@fact.Nutrient" title="@fact.Nutrient" class="form-control" id="@string.Format("fact_{0}", fact.Id)" min="0" />
                                                 <div class="input-group-addon">@((fact.Nutrient == Nutrient.Calories ? NutritionFact.DefaultCaloriesUnit : NutritionFact.DefaultUnit).ToUpper())</div>
                                             </div>
                                         </div>

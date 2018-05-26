@@ -1,6 +1,5 @@
 namespace Diary.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
     
     public partial class Modified_Authorization_Entities : DbMigration

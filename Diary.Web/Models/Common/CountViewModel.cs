@@ -1,4 +1,6 @@
-﻿namespace Diary.Web.Models.Common
+﻿using System.Collections.Generic;
+
+namespace Diary.Web.Models.Common
 {
     public class CountViewModel
     {
@@ -23,5 +25,12 @@
         public int MealYesterday { get; set; }
         public int MealLastWeek { get; set; }
         public int MealLastMonth { get; set; }
+
+        public int TotalCalories { get; set; }
+        public int TotalCarbs { get; set; }
+        public int TotalFat { get; set; }
+        public int TotalProtein { get; set; }
+
+        public IReadOnlyList<string> MostUsedIngredients { get; set; }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
 using Diary.Authorization.Users;
-using Diary.Users;
 
 namespace Diary.Sessions.Dto
 {

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -11,148 +10,6 @@ using Diary.Authorization.Users;
 
 namespace Diary.Domain.Models
 {
-
-    public class Ingredient : FullAuditedEntity
-    {
-        public const int MaxNameLength = 256;
-
-        [Required]
-        [MaxLength(MaxNameLength)]
-        public virtual string Name { get; protected set; }
-
-        [Column("IngredientType")]
-        public virtual IngredientType Type { get; protected set; }
-
-        public virtual ICollection<NutritionFact> NutritionFacts { get; protected set; }
-        public virtual ICollection<Meal> Meals { get; protected set; }
-
-        protected Ingredient()
-        {
-            //this.NutritionFacts = new HashSet<NutritionFact>();
-            //this.Meals = new HashSet<Meal>();
-        }
-
-        public static Ingredient Create(string name, IngredientType type = IngredientType.Other, List<NutritionFact> facts = null)
-        {
-            var i = new Ingredient
-            {
-                Name = name,
-                NutritionFacts = facts ?? GetDefaultNutritionFacts()
-            };
-
-            return i;
-        }
-
-        public void AddOrChangeDeclaration(Nutrient nutrient, int value)
-        {
-            var fact = NutritionFacts.FirstOrDefault(f => f.Nutrient == nutrient);
-            if (fact == null)
-            {
-                fact = NutritionFact.Create(nutrient, value);
-                NutritionFacts.Add(fact);
-            }
-            else
-            {
-                foreach (var f in NutritionFacts.Where(i => i.Nutrient == nutrient))
-                {
-                    f.ChangeValue(value);
-                }
-            }
-        }
-
-        public static List<NutritionFact> GetDefaultNutritionFacts()
-        {
-            List<NutritionFact> t = new List<NutritionFact>();
-
-            foreach (Nutrient n in Enum.GetValues(typeof(Nutrient)))
-            {
-                t.Add(NutritionFact.Create(n));
-            }
-
-            return t;
-        }
-    }
-
-    public class NutritionFact : FullAuditedEntity
-    {
-        public const int MinValue = 0;
-        public const int DefaultValue = 0;
-        public const string DefaultUnit = "grams";
-        public const string DefaultCaloriesUnit = "kcal";
-
-        [Required]
-        public virtual Nutrient Nutrient { get; protected set; }
-
-        [Required]
-        [DefaultValue(DefaultValue)]
-        [Range(MinValue, int.MaxValue)]
-        public virtual int Value { get; protected set; }
-
-        
-
-        protected NutritionFact()
-        {
-
-        }
-
-        public static NutritionFact Create(Nutrient nutrient, int value = 0)
-        {
-            var fact = new NutritionFact
-            {
-                Nutrient = nutrient,
-                Value = value
-            };
-
-            return fact;
-        }
-
-        public void ChangeValue(int value)
-        {
-            Value = value;
-        }
-
-
-    }
-
-    public enum Nutrient
-    {
-        Calories,
-        Fat,
-        SaturatedFat,
-        PolyunsaturatedFat,
-        MonounsaturatedFat,
-        TransFat,
-        Cholesterol,
-        Sodium,
-        Potassium,
-        Carbohydrates,
-        Fiber,
-        Sugar,
-        Protein,
-        VitaminA,
-        VitaminC,
-        Calcium,
-        Iron
-    }
-
-    public enum MealType
-    {
-        Breakfast,
-        Lunch,
-        Dinner,
-        Snack,
-        Other
-    }
-
-    public enum IngredientType
-    {
-        Meat,
-        Vegetable,
-        Fruit,
-        Drink,
-        Other
-    }
-
     public class Meal : FullAuditedEntity
     {
         public const int MaxNameLength = 256;
@@ -269,5 +126,4 @@ namespace Diary.Domain.Models
             AddIngredients(ingredientsToAdd);
         }
     }
-
 }

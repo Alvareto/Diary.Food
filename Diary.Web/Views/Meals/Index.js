@@ -104,6 +104,8 @@
             };
 
             function updateDisplay(cur_date) {
+                
+
                 $datepicker.find(".date-container > .weekday").text(cur_date.format(format.weekday));
                 $datepicker.find(".date-container > .date").text(cur_date.format(format.date));
                 $datepicker.find(".date-container > .year").text(cur_date.format(format.year));

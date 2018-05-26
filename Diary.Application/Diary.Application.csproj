@@ -205,7 +205,21 @@
     <Compile Include="Configuration\IConfigurationAppService.cs" />
     <Compile Include="Configuration\Ui\UiThemeInfo.cs" />
     <Compile Include="Configuration\Ui\UiThemes.cs" />
+    <Compile Include="Domain\CountAppService.cs" />
+    <Compile Include="Domain\Dto\CreateMealDto.cs" />
+    <Compile Include="Domain\Dto\DiaryMapProfile.cs" />
+    <Compile Include="Domain\ICountAppService.cs" />
+    <Compile Include="Domain\IIngredientAppService.cs" />
+    <Compile Include="Domain\IMealAppService.cs" />
+    <Compile Include="Domain\IngredientAppService.cs" />
+    <Compile Include="Domain\Dto\IngredientDto.cs" />
+    <Compile Include="Domain\INutritionFactAppService.cs" />
     <Compile Include="Domain\MealAppService.cs" />
+    <Compile Include="Domain\Dto\MealDto.cs" />
+    <Compile Include="Domain\NutritionFactAppService.cs" />
+    <Compile Include="Domain\Dto\NutritionFactDto.cs" />
+    <Compile Include="Domain\Dto\UpdateMealDto.cs" />
+    <Compile Include="IDiaryAppService.cs" />
     <Compile Include="MultiTenancy\Dto\CreateTenantDto.cs" />
     <Compile Include="MultiTenancy\Dto\EditTenantDto.cs" />
     <Compile Include="MultiTenancy\Dto\TenantDto.cs" />
@@ -238,9 +252,7 @@
       <Name>Diary.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Domain\Dto\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

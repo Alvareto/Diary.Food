@@ -191,7 +191,12 @@
     <Compile Include="Authorization\Users\UserRegistrationManager.cs" />
     <Compile Include="Configuration\AppSettingNames.cs" />
     <Compile Include="Configuration\AppSettingProvider.cs" />
+    <Compile Include="Domain\Models\Ingredient.cs" />
+    <Compile Include="Domain\Models\IngredientType.cs" />
     <Compile Include="Domain\Models\Meal.cs" />
+    <Compile Include="Domain\Models\MealType.cs" />
+    <Compile Include="Domain\Models\Nutrient.cs" />
+    <Compile Include="Domain\Models\NutritionFact.cs" />
     <Compile Include="Editions\EditionManager.cs" />
     <Compile Include="Features\FeatureValueStore.cs" />
     <Compile Include="MultiTenancy\Tenant.cs" />

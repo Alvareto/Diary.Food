@@ -1,6 +1,5 @@
 namespace Diary.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
     
     public partial class Added_Type_to_Meal_and_Ingredient : DbMigration

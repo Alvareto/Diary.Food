@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Threading;
 using Abp.Castle.Logging.Log4Net;
 using Abp.Web;
-using Abp.WebApi.Validation;
 using Castle.Facilities.Logging;
 
 namespace Diary.Web
