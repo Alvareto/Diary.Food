@@ -98,5 +98,27 @@
     <text name="NewIngredients">New Ingredients</text>
     <text name="DashboardTitleMealTypes">Meal Distribution</text>
 
+    <text name="Statistics">Statistics</text>
+    <text name="Refresh">Refresh</text>
+    <text name="DashboardTitleNutritionFactTypes">Nutrient Distribution</text>
+    <text name="Calories">Calories</text>
+    <text name="Carbohydrates">Carbohydrates</text>
+    <text name="Protein">Protein</text>
+    <text name="Fats">Fats</text>
+    <text name="DashboardTitleMostUsedIngredients">Most used ingredients</text>
+    <text name="DashboardTitleMealHistory">Meal history</text>
+    <text name="HistoryToday">Today</text>
+    <text name="HistoryYesterday">Yesterday</text>
+    <text name="HistoryLastWeek">Last Week</text>
+    <text name="HistoryLastMonth">Last Month</text>
+    <text name="HistoryLastYear">Last Year</text>
+    <text name="HistoryAll">All</text>
+    <text name="DashboardTitleIngredientTypes">Ingredient Distribution</text>
+    <text name="Refresh">Refresh</text>
+    <text name="CreateNewIngredient">Create New Ingredient</text>
+    <text name="IngredientDetails">Ingredien tDetails</text>
+    <text name="IngredientFacts">Ingredient Facts</text>
+    <text name="IngredientType">Ingredient Type</text>
+    <text name="SelectIngredientType">Select ingredient type</text>
   </texts>
 </localizationDictionary>
