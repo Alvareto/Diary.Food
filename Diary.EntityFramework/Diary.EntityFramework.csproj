@@ -223,6 +223,10 @@
     <Compile Include="Migrations\201805261012120_Added_Type_to_Meal_and_Ingredient.Designer.cs">
       <DependentUpon>201805261012120_Added_Type_to_Meal_and_Ingredient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806021659355_Added_Approve_Ingredient.cs" />
+    <Compile Include="Migrations\201806021659355_Added_Approve_Ingredient.Designer.cs">
+      <DependentUpon>201806021659355_Added_Approve_Ingredient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DiaryDataModule.cs" />
@@ -264,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805261012120_Added_Type_to_Meal_and_Ingredient.resx">
       <DependentUpon>201805261012120_Added_Type_to_Meal_and_Ingredient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806021659355_Added_Approve_Ingredient.resx">
+      <DependentUpon>201806021659355_Added_Approve_Ingredient.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

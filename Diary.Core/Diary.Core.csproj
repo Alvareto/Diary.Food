@@ -191,6 +191,9 @@
     <Compile Include="Authorization\Users\UserRegistrationManager.cs" />
     <Compile Include="Configuration\AppSettingNames.cs" />
     <Compile Include="Configuration\AppSettingProvider.cs" />
+    <Compile Include="Domain\IHistory.cs" />
+    <Compile Include="Domain\Models\ApprovalStatus.cs" />
+    <Compile Include="Domain\IApprovalProcess.cs" />
     <Compile Include="Domain\Models\Ingredient.cs" />
     <Compile Include="Domain\Models\IngredientType.cs" />
     <Compile Include="Domain\Models\Meal.cs" />

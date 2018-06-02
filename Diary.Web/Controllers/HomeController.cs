@@ -51,6 +51,8 @@ namespace Diary.Web.Controllers
                 MostUsedIngredients = _countService.GetMostUsedIngredients(6).Items
             };
 
+            vm.MealYesterday -= vm.MealToday; // fixed bug
+
             // get percentages
             vm.MealBreakfast = (int) (vm.MealBreakfast * 100f / vm.Meals);
             vm.MealLunch = (int) (vm.MealLunch * 100f / vm.Meals);

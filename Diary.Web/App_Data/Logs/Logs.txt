@@ -563,3 +563,257 @@ DEBUG 2018-05-26 22:22:02,105 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        -
 DEBUG 2018-05-26 22:22:11,399 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 9fb0db27-9e92-4629-a76e-b87486613631
 DEBUG 2018-05-26 22:22:12,997 [23   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"17e0f82a-2d51-4666-bb05-b4a671387378","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-26T22:22:12.9933589+02:00","Properties":{}}
 DEBUG 2018-05-26 22:22:13,109 [34   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 17e0f82a-2d51-4666-bb05-b4a671387378
+DEBUG 2018-05-26 22:45:42,260 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 17e0f82a-2d51-4666-bb05-b4a671387378
+DEBUG 2018-05-26 22:45:44,680 [35   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"83014b29-a872-4a8c-b226-71e9bdcc1f47","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-26T22:45:44.6756967+02:00","Properties":{}}
+DEBUG 2018-05-26 22:45:44,697 [38   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 83014b29-a872-4a8c-b226-71e9bdcc1f47
+DEBUG 2018-05-26 22:45:51,150 [32   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 83014b29-a872-4a8c-b226-71e9bdcc1f47
+DEBUG 2018-05-26 22:45:54,385 [34   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"9eb50b50-ba9d-4645-bb94-3da1ca5ff127","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-26T22:45:54.3801979+02:00","Properties":{}}
+DEBUG 2018-05-26 22:45:54,409 [36   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 9eb50b50-ba9d-4645-bb94-3da1ca5ff127
+DEBUG 2018-05-30 08:48:31,053 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-30 08:48:33,511 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-05-30 08:48:33,520 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Diary.Web.DiaryWebModule, Diary.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:33,522 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Diary.DiaryDataModule, Diary.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:33,522 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:33,522 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:33,523 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:33,523 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:33,523 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:33,523 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:33,524 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Diary.DiaryCoreModule, Diary.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:33,524 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Diary.DiaryApplicationModule, Diary.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:33,524 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:33,524 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Diary.Api.DiaryWebApiModule, Diary.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:33,525 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:33,525 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:33,526 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:33,526 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:33,547 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:33,551 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-05-30 08:48:38,776 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-30 08:48:38,776 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-30 08:48:38,776 [1    ] o.Configuration.LanguageManagementConfig - Converted Diary (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-30 08:48:38,776 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-30 08:48:40,121 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Diary.EntityFramework.DiaryDbContext, Diary.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:48:42,860 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-05-30 08:48:43,105 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-30 08:48:43,200 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-05-30 08:48:43,272 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Diary
+DEBUG 2018-05-30 08:48:43,346 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-30 08:48:43,413 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-30 08:48:43,499 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 18 classes define auto mapping attributes
+DEBUG 2018-05-30 08:48:43,499 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-05-30 08:48:43,503 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-05-30 08:48:43,503 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Users.Dto.CreateUserDto
+DEBUG 2018-05-30 08:48:43,503 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Users.Dto.UpdateUserDto
+DEBUG 2018-05-30 08:48:43,503 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Users.Dto.UserDto
+DEBUG 2018-05-30 08:48:43,503 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Roles.Dto.CreateRoleDto
+DEBUG 2018-05-30 08:48:43,503 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Roles.Dto.PermissionDto
+DEBUG 2018-05-30 08:48:43,503 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Roles.Dto.RoleDto
+DEBUG 2018-05-30 08:48:43,503 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-05-30 08:48:43,504 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-05-30 08:48:43,504 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.MultiTenancy.Dto.TenantDto
+DEBUG 2018-05-30 08:48:43,504 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Domain.Dto.CreateMealDto
+DEBUG 2018-05-30 08:48:43,504 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Domain.Dto.IngredientDto
+DEBUG 2018-05-30 08:48:43,504 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Domain.Dto.MealDto
+DEBUG 2018-05-30 08:48:43,504 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Domain.Dto.NutritionFactDto
+DEBUG 2018-05-30 08:48:43,504 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Domain.Dto.UpdateMealDto
+DEBUG 2018-05-30 08:48:43,504 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-05-30 08:48:43,504 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-05-30 08:48:45,215 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-05-30 08:48:45,216 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-05-30 08:48:45,217 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-05-30 08:48:45,219 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-05-30 08:48:45,220 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Domain.ICountAppService' with service name 'app/count'.
+DEBUG 2018-05-30 08:48:45,222 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Domain.IIngredientAppService' with service name 'app/ingredient'.
+DEBUG 2018-05-30 08:48:45,223 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Domain.IMealAppService' with service name 'app/meal'.
+DEBUG 2018-05-30 08:48:45,224 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Domain.INutritionFactAppService' with service name 'app/nutritionFact'.
+DEBUG 2018-05-30 08:48:45,225 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-05-30 08:48:45,227 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-05-30 08:49:58,719 [10   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"bf442532-6791-4716-9211-b669e2788600","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T08:49:58.7027908+02:00","Properties":{}}
+DEBUG 2018-05-30 08:49:58,885 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: bf442532-6791-4716-9211-b669e2788600
+DEBUG 2018-05-30 08:50:40,777 [17   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: bf442532-6791-4716-9211-b669e2788600
+DEBUG 2018-05-30 08:50:42,665 [14   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"875fe53e-720f-44cb-9f9f-78c4760189cf","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T08:50:42.6622963+02:00","Properties":{}}
+DEBUG 2018-05-30 08:50:42,693 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 875fe53e-720f-44cb-9f9f-78c4760189cf
+DEBUG 2018-05-30 08:50:47,255 [20   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 875fe53e-720f-44cb-9f9f-78c4760189cf
+DEBUG 2018-05-30 08:50:49,072 [14   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"b6983c3f-3452-4128-812a-5d37dafa077e","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T08:50:49.0628487+02:00","Properties":{}}
+DEBUG 2018-05-30 08:50:49,178 [14   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: b6983c3f-3452-4128-812a-5d37dafa077e
+DEBUG 2018-05-30 08:50:51,868 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: b6983c3f-3452-4128-812a-5d37dafa077e
+DEBUG 2018-05-30 08:50:54,223 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"3cde9b16-98f3-4069-9683-b0f8cbeb16aa","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T08:50:54.2166724+02:00","Properties":{}}
+DEBUG 2018-05-30 08:50:54,357 [20   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 3cde9b16-98f3-4069-9683-b0f8cbeb16aa
+DEBUG 2018-05-30 08:50:55,312 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 3cde9b16-98f3-4069-9683-b0f8cbeb16aa
+DEBUG 2018-05-30 08:50:56,739 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"69964e0f-5ae6-4eda-835a-1b89f06c0ac9","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T08:50:56.7346739+02:00","Properties":{}}
+DEBUG 2018-05-30 08:50:56,808 [17   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 69964e0f-5ae6-4eda-835a-1b89f06c0ac9
+DEBUG 2018-05-30 08:50:57,522 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 69964e0f-5ae6-4eda-835a-1b89f06c0ac9
+DEBUG 2018-05-30 08:50:58,245 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"9209c2b5-a4d0-4bc7-990f-347ae4168f69","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T08:50:58.2415034+02:00","Properties":{}}
+DEBUG 2018-05-30 08:50:58,260 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 9209c2b5-a4d0-4bc7-990f-347ae4168f69
+DEBUG 2018-05-30 08:51:37,406 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 9209c2b5-a4d0-4bc7-990f-347ae4168f69
+DEBUG 2018-05-30 08:51:38,727 [17   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"417e76f7-634e-461c-b54b-630763324e42","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T08:51:38.7242819+02:00","Properties":{}}
+DEBUG 2018-05-30 08:51:38,744 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 417e76f7-634e-461c-b54b-630763324e42
+INFO  2018-05-30 08:52:33,471 [9    ] Diary.Domain.MealAppService              - Creating a meal for input: Diary.Domain.Dto.CreateMealDto
+DEBUG 2018-05-30 08:52:35,398 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 417e76f7-634e-461c-b54b-630763324e42
+DEBUG 2018-05-30 08:52:37,176 [19   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"7c63834f-f585-4921-b6e1-cd102fed85ea","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T08:52:37.1706654+02:00","Properties":{}}
+DEBUG 2018-05-30 08:52:37,206 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 7c63834f-f585-4921-b6e1-cd102fed85ea
+WARN  2018-05-30 08:52:52,287 [9    ] naries.DictionaryBasedLocalizationSource - Can not find 'EditMeal' in localization source 'Diary'!
+INFO  2018-05-30 08:53:12,536 [21   ] Diary.Domain.MealAppService              - Updating a meal for input: Diary.Domain.Dto.UpdateMealDto
+DEBUG 2018-05-30 08:53:14,183 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 7c63834f-f585-4921-b6e1-cd102fed85ea
+DEBUG 2018-05-30 08:53:15,792 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"e202ddde-70dc-456b-937a-2d314c7f90c2","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T08:53:15.7838422+02:00","Properties":{}}
+DEBUG 2018-05-30 08:53:15,819 [21   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: e202ddde-70dc-456b-937a-2d314c7f90c2
+DEBUG 2018-05-30 08:53:25,117 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: e202ddde-70dc-456b-937a-2d314c7f90c2
+DEBUG 2018-05-30 08:53:27,218 [26   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"a3797d83-eb8f-4da5-b929-29a360d047df","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T08:53:27.2117397+02:00","Properties":{}}
+DEBUG 2018-05-30 08:53:27,383 [23   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: a3797d83-eb8f-4da5-b929-29a360d047df
+DEBUG 2018-05-30 08:53:39,982 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: a3797d83-eb8f-4da5-b929-29a360d047df
+DEBUG 2018-05-30 08:53:42,225 [25   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"6576bea3-bc5c-42f9-8f00-3d95c10547fd","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T08:53:42.2163435+02:00","Properties":{}}
+DEBUG 2018-05-30 08:53:42,312 [26   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 6576bea3-bc5c-42f9-8f00-3d95c10547fd
+DEBUG 2018-05-30 08:56:24,764 [31   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-05-30 08:56:24,765 [31   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-30 08:56:24,765 [31   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-30 08:56:24,765 [31   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-05-30 08:56:42,665 [15   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-30 08:56:42,754 [15   ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-05-30 08:56:42,798 [15   ] Abp.Modules.AbpModuleManager             - Loaded module: Diary.Web.DiaryWebModule, Diary.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:42,803 [15   ] Abp.Modules.AbpModuleManager             - Loaded module: Diary.DiaryDataModule, Diary.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:42,804 [15   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:42,804 [15   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:42,805 [15   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:42,808 [15   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:42,809 [15   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:42,810 [15   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:42,810 [15   ] Abp.Modules.AbpModuleManager             - Loaded module: Diary.DiaryCoreModule, Diary.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:42,810 [15   ] Abp.Modules.AbpModuleManager             - Loaded module: Diary.DiaryApplicationModule, Diary.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:42,811 [15   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:42,812 [15   ] Abp.Modules.AbpModuleManager             - Loaded module: Diary.Api.DiaryWebApiModule, Diary.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:42,812 [15   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:42,813 [15   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:42,813 [15   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:42,814 [15   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:42,814 [15   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:42,824 [15   ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-05-30 08:56:43,585 [15   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-30 08:56:43,585 [15   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-30 08:56:43,585 [15   ] o.Configuration.LanguageManagementConfig - Converted Diary (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-30 08:56:43,585 [15   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-30 08:56:45,085 [15   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Diary.EntityFramework.DiaryDbContext, Diary.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 08:56:48,153 [15   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-05-30 08:56:48,407 [15   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-30 08:56:48,667 [15   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-05-30 08:56:48,786 [15   ] Abp.Localization.LocalizationManager     - Initialized localization source: Diary
+DEBUG 2018-05-30 08:56:48,855 [15   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-30 08:56:48,939 [15   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-30 08:56:49,013 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 18 classes define auto mapping attributes
+DEBUG 2018-05-30 08:56:49,013 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-05-30 08:56:49,017 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-05-30 08:56:49,017 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Users.Dto.CreateUserDto
+DEBUG 2018-05-30 08:56:49,018 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Users.Dto.UpdateUserDto
+DEBUG 2018-05-30 08:56:49,018 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Users.Dto.UserDto
+DEBUG 2018-05-30 08:56:49,018 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Roles.Dto.CreateRoleDto
+DEBUG 2018-05-30 08:56:49,018 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Roles.Dto.PermissionDto
+DEBUG 2018-05-30 08:56:49,018 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Roles.Dto.RoleDto
+DEBUG 2018-05-30 08:56:49,018 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-05-30 08:56:49,018 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-05-30 08:56:49,018 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.MultiTenancy.Dto.TenantDto
+DEBUG 2018-05-30 08:56:49,018 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Domain.Dto.CreateMealDto
+DEBUG 2018-05-30 08:56:49,019 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Domain.Dto.IngredientDto
+DEBUG 2018-05-30 08:56:49,019 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Domain.Dto.MealDto
+DEBUG 2018-05-30 08:56:49,019 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Domain.Dto.NutritionFactDto
+DEBUG 2018-05-30 08:56:49,019 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Domain.Dto.UpdateMealDto
+DEBUG 2018-05-30 08:56:49,019 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-05-30 08:56:49,019 [15   ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-05-30 08:56:54,177 [15   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-05-30 08:56:54,179 [15   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-05-30 08:56:54,183 [15   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-05-30 08:56:54,185 [15   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-05-30 08:56:54,188 [15   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Domain.ICountAppService' with service name 'app/count'.
+DEBUG 2018-05-30 08:56:54,190 [15   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Domain.IIngredientAppService' with service name 'app/ingredient'.
+DEBUG 2018-05-30 08:56:54,194 [15   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Domain.IMealAppService' with service name 'app/meal'.
+DEBUG 2018-05-30 08:56:54,200 [15   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Domain.INutritionFactAppService' with service name 'app/nutritionFact'.
+DEBUG 2018-05-30 08:56:54,203 [15   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-05-30 08:56:54,205 [15   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-05-30 08:57:18,327 [14   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected (on reconnected event): {"ConnectionId":"6576bea3-bc5c-42f9-8f00-3d95c10547fd","IpAddress":null,"TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T08:57:18.2509871+02:00","Properties":{}}
+DEBUG 2018-05-30 08:57:18,561 [29   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"c8e67ed3-6f2f-48cf-adea-e8a40ef3f690","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T08:57:18.5570795+02:00","Properties":{}}
+DEBUG 2018-05-30 08:57:44,984 [17   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: c8e67ed3-6f2f-48cf-adea-e8a40ef3f690
+DEBUG 2018-05-30 08:57:46,290 [30   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"5c39e871-e5c3-4144-ab97-dc272088a888","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T08:57:46.2823822+02:00","Properties":{}}
+DEBUG 2018-05-30 08:57:46,339 [31   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 5c39e871-e5c3-4144-ab97-dc272088a888
+DEBUG 2018-05-30 08:57:53,499 [30   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 6576bea3-bc5c-42f9-8f00-3d95c10547fd
+DEBUG 2018-05-30 08:58:03,675 [24   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 5c39e871-e5c3-4144-ab97-dc272088a888
+DEBUG 2018-05-30 08:58:20,044 [35   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-05-30 08:58:20,045 [35   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-30 08:58:20,046 [35   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-30 08:58:20,046 [35   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-05-30 09:00:15,012 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-30 09:00:15,086 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-05-30 09:00:15,102 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Diary.Web.DiaryWebModule, Diary.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:15,106 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Diary.DiaryDataModule, Diary.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:15,106 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:15,106 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:15,106 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:15,107 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:15,107 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:15,107 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:15,108 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Diary.DiaryCoreModule, Diary.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:15,108 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Diary.DiaryApplicationModule, Diary.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:15,108 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:15,109 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Diary.Api.DiaryWebApiModule, Diary.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:15,109 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:15,109 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:15,109 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:15,109 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:15,110 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:15,136 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-05-30 09:00:15,466 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-30 09:00:15,466 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-30 09:00:15,466 [1    ] o.Configuration.LanguageManagementConfig - Converted Diary (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-30 09:00:15,466 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-05-30 09:00:16,003 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Diary.EntityFramework.DiaryDbContext, Diary.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-30 09:00:18,144 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-05-30 09:00:18,216 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-30 09:00:18,320 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-05-30 09:00:18,388 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Diary
+DEBUG 2018-05-30 09:00:18,450 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-30 09:00:18,535 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-30 09:00:18,604 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 18 classes define auto mapping attributes
+DEBUG 2018-05-30 09:00:18,604 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-05-30 09:00:18,611 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-05-30 09:00:18,611 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Users.Dto.CreateUserDto
+DEBUG 2018-05-30 09:00:18,612 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Users.Dto.UpdateUserDto
+DEBUG 2018-05-30 09:00:18,612 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Users.Dto.UserDto
+DEBUG 2018-05-30 09:00:18,612 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Roles.Dto.CreateRoleDto
+DEBUG 2018-05-30 09:00:18,612 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Roles.Dto.PermissionDto
+DEBUG 2018-05-30 09:00:18,612 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Roles.Dto.RoleDto
+DEBUG 2018-05-30 09:00:18,612 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-05-30 09:00:18,612 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-05-30 09:00:18,612 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.MultiTenancy.Dto.TenantDto
+DEBUG 2018-05-30 09:00:18,612 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Domain.Dto.CreateMealDto
+DEBUG 2018-05-30 09:00:18,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Domain.Dto.IngredientDto
+DEBUG 2018-05-30 09:00:18,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Domain.Dto.MealDto
+DEBUG 2018-05-30 09:00:18,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Domain.Dto.NutritionFactDto
+DEBUG 2018-05-30 09:00:18,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Domain.Dto.UpdateMealDto
+DEBUG 2018-05-30 09:00:18,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-05-30 09:00:18,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Diary.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-05-30 09:00:20,165 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-05-30 09:00:20,169 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-05-30 09:00:20,171 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-05-30 09:00:20,172 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-05-30 09:00:20,175 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Domain.ICountAppService' with service name 'app/count'.
+DEBUG 2018-05-30 09:00:20,178 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Domain.IIngredientAppService' with service name 'app/ingredient'.
+DEBUG 2018-05-30 09:00:20,179 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Domain.IMealAppService' with service name 'app/meal'.
+DEBUG 2018-05-30 09:00:20,180 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Domain.INutritionFactAppService' with service name 'app/nutritionFact'.
+DEBUG 2018-05-30 09:00:20,183 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-05-30 09:00:20,184 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Diary.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-05-30 09:00:57,692 [35   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"046076c9-f9ee-49d3-9044-766ca84ff020","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T09:00:57.6813376+02:00","Properties":{}}
+DEBUG 2018-05-30 09:00:57,740 [17   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 046076c9-f9ee-49d3-9044-766ca84ff020
+DEBUG 2018-05-30 09:01:25,865 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"b924a62b-8daa-4403-b780-9b898f75c7c0","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T09:01:25.858678+02:00","Properties":{}}
+DEBUG 2018-05-30 09:01:26,042 [28   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: b924a62b-8daa-4403-b780-9b898f75c7c0
+DEBUG 2018-05-30 09:01:42,766 [19   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 046076c9-f9ee-49d3-9044-766ca84ff020
+DEBUG 2018-05-30 09:02:07,792 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: b924a62b-8daa-4403-b780-9b898f75c7c0
+DEBUG 2018-05-30 10:37:10,986 [35   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"cdb7b94a-9cba-4736-bb59-5800ab9f66d0","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T10:37:10.9757864+02:00","Properties":{}}
+DEBUG 2018-05-30 10:37:11,128 [31   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: cdb7b94a-9cba-4736-bb59-5800ab9f66d0
+DEBUG 2018-05-30 10:37:45,800 [19   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: cdb7b94a-9cba-4736-bb59-5800ab9f66d0
+DEBUG 2018-05-30 10:37:46,717 [19   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"52003b3b-aa54-4aad-8c65-ba00faf77b50","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T10:37:46.7116171+02:00","Properties":{}}
+DEBUG 2018-05-30 10:37:46,768 [31   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 52003b3b-aa54-4aad-8c65-ba00faf77b50
+WARN  2018-05-30 10:38:03,331 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'EditMeal' in localization source 'Diary'!
+INFO  2018-05-30 10:38:22,632 [14   ] Diary.Domain.MealAppService              - Updating a meal for input: Diary.Domain.Dto.UpdateMealDto
+DEBUG 2018-05-30 10:38:24,787 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 52003b3b-aa54-4aad-8c65-ba00faf77b50
+DEBUG 2018-05-30 10:38:26,010 [35   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"83f13100-bea2-4023-9312-11245761d27e","IpAddress":"172.25.81.97","TenantId":1,"UserId":2,"ConnectTime":"2018-05-30T10:38:26.0009145+02:00","Properties":{}}
+DEBUG 2018-05-30 10:38:26,059 [19   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 83f13100-bea2-4023-9312-11245761d27e
+DEBUG 2018-05-30 11:23:40,590 [27   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"9c8b89bc-6678-46be-9229-b2350015c234","IpAddress":"172.25.81.97","TenantId":1,"UserId":null,"ConnectTime":"2018-05-30T11:23:40.5822359+02:00","Properties":{}}
+DEBUG 2018-05-30 11:24:07,677 [27   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 83f13100-bea2-4023-9312-11245761d27e

@@ -11,5 +11,10 @@ namespace Diary.Authorization.Roles
         {
             public const string Admin = "Admin";
         }
+
+        public static class Ingredients
+        {
+            public const string Admin = "Nutritionist";
+        }
     }
 }

@@ -57,6 +57,35 @@ namespace Diary.Migrations.SeedData
                 _context.SaveChanges();
             }
 
+            // Nutritionist role
+
+            var nutritionRole = _context.Roles.FirstOrDefault(r => r.TenantId == _tenantId && r.Name == StaticRoleNames.Ingredients.Admin);
+            if (nutritionRole == null)
+            {
+                nutritionRole = _context.Roles.Add(new Role(_tenantId, StaticRoleNames.Ingredients.Admin, StaticRoleNames.Ingredients.Admin) { IsStatic = true });
+                _context.SaveChanges();
+
+                //Grant nutrition permissions to nutritionist role
+                var permissions = PermissionFinder
+                    .GetAllPermissions(new DiaryAuthorizationProvider())
+                    .Where(p => p.Name == PermissionNames.Pages_Nutritionist)
+                    .ToList();
+
+                foreach (var permission in permissions)
+                {
+                    _context.Permissions.Add(
+                        new RolePermissionSetting
+                        {
+                            TenantId = _tenantId,
+                            Name = permission.Name,
+                            IsGranted = true,
+                            RoleId = nutritionRole.Id
+                        });
+                }
+
+                _context.SaveChanges();
+            }
+
             //admin user
 
             var adminUser = _context.Users.FirstOrDefault(u => u.TenantId == _tenantId && u.UserName == User.AdminUserName);
@@ -73,6 +102,7 @@ namespace Diary.Migrations.SeedData
                 _context.UserRoles.Add(new UserRole(_tenantId, adminUser.Id, adminRole.Id));
                 _context.SaveChanges();
             }
+
         }
     }
 }

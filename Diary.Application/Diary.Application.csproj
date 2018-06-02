@@ -208,6 +208,7 @@
     <Compile Include="Domain\CountAppService.cs" />
     <Compile Include="Domain\Dto\CreateMealDto.cs" />
     <Compile Include="Domain\Dto\DiaryMapProfile.cs" />
+    <Compile Include="Domain\Dto\IApprovalProcessDto.cs" />
     <Compile Include="Domain\ICountAppService.cs" />
     <Compile Include="Domain\IIngredientAppService.cs" />
     <Compile Include="Domain\IMealAppService.cs" />

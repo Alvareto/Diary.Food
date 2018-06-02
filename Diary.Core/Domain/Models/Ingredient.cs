@@ -4,16 +4,22 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using Abp.Domain.Entities.Auditing;
+using Diary.Authorization.Users;
 
 namespace Diary.Domain.Models
 {
-    public class Ingredient : FullAuditedEntity
+    public class Ingredient : FullAuditedEntity, IApprovalProcess
     {
         public const int MaxNameLength = 256;
 
         [Required]
         [MaxLength(MaxNameLength)]
         public virtual string Name { get; protected set; }
+
+        [Column("IngredientStatus")]
+        public virtual ApprovalStatus Status { get; set; }
+
+        public virtual User ApproverUser { get; set; }
 
         [Column("IngredientType")]
         public virtual IngredientType Type { get; protected set; }
@@ -32,10 +38,22 @@ namespace Diary.Domain.Models
             var i = new Ingredient
             {
                 Name = name,
+                Type = type,
+                Status = ApprovalStatus.Pending,
                 NutritionFacts = facts ?? GetDefaultNutritionFacts()
             };
 
             return i;
+        }
+
+        public void Approve()
+        {
+            this.Status = ApprovalStatus.Approved;
+        }
+
+        public void Reject()
+        {
+            this.Status = ApprovalStatus.Rejected;
         }
 
         public void AddOrChangeDeclaration(Nutrient nutrient, int value)
