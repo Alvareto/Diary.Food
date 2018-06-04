@@ -1,4 +1,6 @@
 using System.Linq;
+using System.Threading.Tasks;
+using Abp.Runtime.Validation;
 using Abp.Timing;
 using Diary.Domain;
 using Diary.Domain.Dto;
@@ -18,14 +20,17 @@ namespace Diary.Tests
             _service = LocalIocManager.Resolve<IMealAppService>();
         }
 
+        /// <summary>
+        /// AAA pattern = Arrange, Act, Assert
+        /// </summary>
         [Fact]
-        public void Should_Create_New_Meals()
+        public void Should_Create_New_Meal()
         {
-            // Prepare for test
+            //Arrange: Prepare for test
             var initialMealCount = UsingDbContext(context => context.Meals.Count());
             var user = UsingDbContext(context => context.Users.First());
 
-            // Run SUT
+            //Act: Run SUT
             _service.CreateWithNames(
                 new CreateMealDto
                 {
@@ -35,7 +40,7 @@ namespace Diary.Tests
                     Ingredients = new string[] { }
                 });
 
-            // Check results
+            //Assert: Check results
             UsingDbContext(context =>
             {
                 context.Meals.Count().ShouldBe(initialMealCount + 1);
@@ -45,5 +50,13 @@ namespace Diary.Tests
                 
             });
         }
+
+        [Fact]
+        public async Task Should_Not_Create_Meal_Without_Required_Properties()
+        {
+            await Assert.ThrowsAsync<AbpValidationException>(() => _service.CreateWithNames(new CreateMealDto()));
+        }
+
+        //public void SH
     }
 }
