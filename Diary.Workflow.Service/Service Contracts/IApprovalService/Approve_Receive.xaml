@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ActivityTemplateFactory x:Class="IApprovalService.Approve_Receive" x:TypeArguments="p1:Receive" xmlns="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation/toolbox" xmlns:dd="clr-namespace:Diary.Domain;assembly=Diary.Application" xmlns:p="http://tempuri.org/" xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:p2="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <p1:Receive Action="http://tempuri.org/IApprovalService/Approve" DisplayName="Approve_Receive" OperationName="Approve" ProtectionLevel="None" ServiceContractName="p:IApprovalService">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Type Type="dd:IApprovalService" x:Key="contractType" />
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p1:ReceiveParametersContent>
+      <p2:OutArgument x:TypeArguments="x:Int32" x:Key="id" />
+    </p1:ReceiveParametersContent>
+  </p1:Receive>
+</ActivityTemplateFactory>

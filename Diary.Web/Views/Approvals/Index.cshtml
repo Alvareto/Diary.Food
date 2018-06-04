@@ -1,0 +1,236 @@
+﻿@using Abp.Configuration
+@using Abp.Web.Mvc.Extensions
+@using Diary.Configuration
+@using Diary.Domain.Models
+@model Diary.Web.Models.Ingredients.IngredientListViewModel
+
+@{
+    ViewBag.Title = "Index";
+    var uiTheme = SettingManager.GetSettingValue(AppSettingNames.UiTheme);
+    ViewBag.ActiveMenu = PageNames.Approval; //The menu item will be active for this page.
+}
+
+@section scripts
+{
+    @Html.IncludeScript("~/Views/Ingredients/Index.js")
+}
+
+<div class="row clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+            <div class="header">
+                <div class="row clearfix">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="block-header">
+                            <h2>@L("Ingredients").ToUpper() DASHBOARD</h2>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 align-right">
+
+                        @*<div class="switch panel-switch-btn">
+                                <span class="m-r-10 font-12">REAL TIME</span>
+                                <label>OFF<input type="checkbox" id="realtime" checked><span class="lever switch-col-cyan"></span>ON</label>
+                            </div>*@
+                        <button type="button" class="btn bg-@uiTheme btn-circle waves-effect waves-circle waves-float" data-toggle="modal" data-target="#IngredientCreateModal">
+                            <i class="material-icons">add</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            @*<div class="body hidden">
+                    <div id="real_time_chart" class="dashboard-flot-chart"></div>
+                </div>*@
+        </div>
+    </div>
+</div>
+
+<div class="row clearfix">
+    @foreach (var item in Model.Ingredients)
+    {
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="card">
+                <ul class="nav nav-tabs nav-tabs-justified" role="tablist">
+                    <li role="presentation" class="active"><a href="#view-ingredient-details-@item.Id" data-toggle="tab">Ingredient Details</a></li>
+                    <li role="presentation"><a href="#view-nutrition-facts-@item.Id" data-toggle="tab">Nutrition Facts</a></li>
+                    <li role="presentation" class="pull-right" style="margin-top: 6px;">
+                        <div class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons" style="color: @uiTheme !important">more_vert</i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#" class="waves-effect waves-block edit-ingredient" data-ingredient-id="@item.Id" data-toggle="modal" data-target="#IngredientEditModal">
+                                        <i class="material-icons" style="color: @uiTheme !important">create</i>@L("Edit")
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="waves-effect waves-block delete-ingredient" data-ingredient-id="@item.Id" data-ingredient-name="@item.Name">
+                                        <i class="material-icons" style="color: @uiTheme !important">delete_sweep</i>@L("Delete")
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="body bg-@uiTheme">
+
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane animated fadeIn active" id="view-ingredient-details-@item.Id">
+                            <div class="row clearfix" style="margin-top: 10px;">
+                                <div class="col-sm-12">
+
+                                    <dl class="">
+                                        <dt>
+                                            @L("IngredientName")
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(modelItem => item.Name)
+                                        </dd>
+
+                                        <dt>
+                                            @L("IngredientType")
+                                        </dt>
+
+                                        <dd class="badge">
+                                            @Html.DisplayFor(modelItem => item.Type)
+                                        </dd>
+
+                                        <dt>
+                                            @L("IngredientStatus")
+                                        </dt>
+
+                                        <dd class="badge">
+                                            @Html.DisplayFor(modelItem => item.Status)
+                                        </dd>
+                                    </dl>
+
+                                    <div class="button-group">
+                                        <a href="@Url.Action("Create", "Ingredients", new {id = item.Id})" class="waves-effect waves-block btn btn-success">
+                                            @L("Approve")
+                                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        </a>
+                                        <a href="#" class="waves-effect waves-block edit-ingredient btn btn-default" data-ingredient-id="@item.Id" data-toggle="modal" data-target="#IngredientEditModal">
+                                            @L("Modify")
+                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                        </a>
+                                        <a href="#" class="waves-effect waves-block delete-ingredient btn btn-danger" data-ingredient-id="@item.Id" data-ingredient-name="@item.Name">
+                                            @L("Reject")
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane animated fadeIn" id="view-nutrition-facts-@item.Id">
+                            <div class="m-b--35 font-bold">
+                                @L("NutritionFacts").ToUpper() <small class="pull-right"><i>per 100 grams</i></small>
+                            </div>
+
+                            <ul class="dashboard-stat-list">
+                                @foreach (var fact in item.NutritionFacts)
+                                {
+                                    <li>
+                                        @fact.Nutrient.ToString().ToUpper()
+                                        <span class="pull-right"><b>@fact.Value</b> <small> @((fact.Nutrient == Nutrient.Calories ? NutritionFact.DefaultCaloriesUnit : NutritionFact.DefaultUnit).ToUpper())</small></span>
+                                        @*<li class="list-group-item">
+                                                <span class="badge">@fact.Value</span>
+                                                @fact.Nutrient
+                                            </li>*@
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
+</div>
+
+
+<div class="modal fade" id="IngredientCreateModal" tabindex="-1" role="dialog" aria-labelledby="IngredientCreateModalLabel" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <span>@L("CreateNewIngredient")</span>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form name="ingredientCreateForm" role="form" novalidate class="form-validation">
+                    <ul class="nav nav-tabs tab-nav-right" role="tablist">
+                        <li role="presentation" class="active"><a href="#create-ingredient-details" data-toggle="tab">@L("IngredientDetails")</a></li>
+                        <li role="presentation"><a href="#create-ingredient-roles" data-toggle="tab">@L("IngredientFacts")</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane animated fadeIn active" id="create-ingredient-details">
+
+                            <div class="row clearfix" style="margin-top: 10px;">
+                                <div class="col-sm-12">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" name="Name" class="form-control" required>
+                                            <label class="form-label">@L("IngredientName")</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix" style="margin-top: 10px;">
+                                <div class="col-sm-12">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            @Html.DropDownList("Type",
+                                                EnumHelper.GetSelectList(typeof(IngredientType)) ,
+                                                L("SelectIngredientType"),
+                                                new { @class = "form-control", required = true })
+
+                                            @*<input type="text" name="Type" class="form-control" required>
+                                                <label class="form-label">@L("IngredientType")</label>*@
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane animated fadeIn" id="create-ingredient-roles">
+
+                            @foreach (var fact in Model.NutritionFacts)
+                            {
+                                <div class="row clearfix" style="margin-top: 10px;">
+                                    <div class="col-sm-12">
+                                        <div class="form-group form-float">
+                                            <div class="input-group form-line">
+                                                <div class="input-group-addon">@fact.Nutrient</div>
+                                                <input type="number" placeholder="@fact.Nutrient" name="fact" value="0" data-fact-id="@fact.Id" data-fact-name="@fact.Nutrient" title="@fact.Nutrient" class="form-control" id="@string.Format("fact_{0}", fact.Id)" min="0" />
+                                                <div class="input-group-addon">@((fact.Nutrient == Nutrient.Calories ? NutritionFact.DefaultCaloriesUnit : NutritionFact.DefaultUnit).ToUpper())</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">@L("Cancel")</button>
+                        <button type="submit" class="btn bg-@uiTheme waves-effect">@L("Save")</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="IngredientEditModal" tabindex="-1" role="dialog" aria-labelledby="IngredientEditModalLabel" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+        </div>
+    </div>
+</div>

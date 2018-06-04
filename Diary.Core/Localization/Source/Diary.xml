@@ -122,5 +122,7 @@
     <text name="IngredientType">Type</text>
     <text name="SelectIngredientType">Select ingredient type</text>
     <text name="SelectMealType">Select meal type</text>
+
+    <text name="ApprovalProcess">Approval Process</text>
   </texts>
 </localizationDictionary>

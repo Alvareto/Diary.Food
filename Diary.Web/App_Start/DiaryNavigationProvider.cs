@@ -49,6 +49,14 @@ namespace Diary.Web
                     )
                 ).AddItem(
                     new MenuItemDefinition(
+                        PageNames.Approval,
+                        L("ApprovalProcess"),
+                        url: "Approvals",
+                        icon: "restaurant_menu",
+                        requiredPermissionName: PermissionNames.Pages_Nutritionist
+                    )
+                ).AddItem(
+                    new MenuItemDefinition(
                         PageNames.Users,
                         L("Users"),
                         url: "Users",

@@ -42,6 +42,12 @@ namespace Diary.Tests
             });
 
             LoginAsDefaultTenantAdmin();
+
+            // Seed initial data for diary
+            UsingDbContext(context =>
+            {
+                new DefaultNutritionAndDiaryBuilder(context).Create();
+            });
         }
 
         protected override void PreInitialize()

@@ -9,5 +9,6 @@ namespace Diary.Web
         public const string Roles = "Roles";
         public const string Meals = "Diary";
         public const string Ingredients = "Nutrition";
+        public const string Approval = "Approval Process";
     }
 }
