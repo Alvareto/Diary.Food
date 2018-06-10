@@ -23,89 +23,49 @@ namespace Diary.Tests
 
         /// <summary>
         /// AAA pattern = Arrange, Act, Assert
-        /// </summary>
-        //[Fact]
-        //public void Should_Create_New_Meal()
-        //{
-        //    //Arrange: Prepare for test
-        //    var initialMealCount = UsingDbContext(context => context.Meals.Count());
-
-        //    LoginAsHostAdmin();
-
-        //    //Act: Run SUT
-        //    _service.CreateWithNames(
-        //        new CreateMealDto
-        //        {
-        //            Name = "TestMeal",
-        //            Date = Clock.Now,
-        //            Type = MealType.Breakfast,
-        //            Ingredients = new string[] { }
-        //        });
-
-        //    //Assert: Check results
-        //    UsingDbContext(context =>
-        //    {
-        //        context.Meals.Count().ShouldBe(initialMealCount + 1);
-        //        var meal = context.Meals.FirstOrDefault(m => m.Name == "TestMeal");
-        //        meal.ShouldNotBe(null);
-        //        meal.Type.ShouldBe(MealType.Breakfast);
-
-        //    });
-        //}
-
-        //[Fact]
-        //public void Should_Pass_Validation_Rule()
-        //{
-        //    //_service.WRONG_CreateWithNames(
-        //    //    new CreateMealDto
-        //    //    {
-        //    //        Name = "TestMeal",
-        //    //        Date = Clock.Now,
-        //    //        Type = MealType.Breakfast,
-        //    //        Ingredients = new string[] { }
-        //    //    });
-        //}
-
-        //[Fact]
-        //public async Task Should_Not_Create_Meal_Without_Required_Properties()
-        //{
-        //    await Assert.ThrowsAsync<AbpValidationException>(() => _service.CreateWithNames(new CreateMealDto()));
-        //}
-
-
-
-
-        /// <summary>
         /// Instancirati objekt poslovnog sloja te testirati neko validacijsko pravilo
         /// </summary>
         [Fact]
         public void Should_ValidateObject()
         {
-            Assert.Throws<AbpValidationException>(() => _service.ValidateObject(
-                new CreateMealDto
-                {
-                    Date = Clock.Now.AddMonths(5), // can't have future date
-                }));
+            //Arrange: Prepare for test
+            var dto = new CreateMealDto
+            {
+                Date = Clock.Now.AddMonths(5), // can't have future date
+            };
+
+            //Act: Run SUT
+            var ex = Record.Exception(() => _service.ValidateObject(dto));
+
+            //Assert: Check results
+            Assert.IsType<AbpValidationException>(ex);
         }
 
         /// <summary>
+        /// AAA pattern = Arrange, Act, Assert
         /// Testirati metodu koja æe provjereni objekt zapisati u bazu podataka
         /// </summary>
         [Fact]
         public void Should_SaveValidatedObject()
         {
+            //Arrange: Prepare for test
+            var dto = new CreateMealDto
+            {
+                Name = "TestMeal",
+                Date = Clock.Now,
+                Type = MealType.Breakfast,
+                Ingredients = new string[] { }
+            };
+
             //Act: Run SUT
-            _service.SaveValidatedObject(
-                new CreateMealDto
-                {
-                    Name = "TestMeal",
-                    Date = Clock.Now,
-                    Type = MealType.Breakfast,
-                    Ingredients = new string[] { }
-                });
+            var ex = Record.Exception(() => _service.SaveValidatedObject(dto));
+
+            //Assert: Check results
+            Assert.Null(ex);
         }
 
         /// <summary>
+        /// AAA pattern = Arrange, Act, Assert
         /// Testirati metodu koja èitanjem dokazuje da je u BP zapisan ispravan podatak
         /// </summary>
         [Fact]
