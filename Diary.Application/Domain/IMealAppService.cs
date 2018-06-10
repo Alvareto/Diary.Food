@@ -3,9 +3,19 @@ using Diary.Domain.Dto;
 
 namespace Diary.Domain
 {
-    public interface IMealAppService : IDiaryAppService<MealDto>
+    public interface IMealAppService : IDiaryAppService<MealDto>, ITestingHomework
     {
         Task<MealDto> CreateWithNames(CreateMealDto input);
         Task<MealDto> UpdateWithNames(UpdateMealDto input);
+        
+    }
+
+    public interface ITestingHomework
+    {
+        void ValidateObject(CreateMealDto input);
+
+        void SaveValidatedObject(CreateMealDto input);
+
+        Task<int> CheckIdSavedValidatedObject(CreateMealDto input);
     }
 }

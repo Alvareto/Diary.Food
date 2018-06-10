@@ -1,10 +1,14 @@
-﻿using System;
+﻿#define WRONG
+//#undef WRONG
+
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
+using Abp.Runtime.Validation;
 using Abp.UI;
 using Diary.Authorization.Users;
 using Diary.Domain.Dto;
@@ -119,6 +123,8 @@ namespace Diary.Domain
             await Repository.DeleteAsync(meal);
         }
 
+        #region VALIDATIONS
+
         /// <inheritdoc />
         protected override Meal MapToEntity(MealDto createInput)
         {
@@ -197,5 +203,63 @@ namespace Diary.Domain
             return base.MapToEntityDto(entity);
         }
 
+        #endregion
+
+#if WRONG
+        [DisableValidation]
+#endif
+        public async void ValidateObject(CreateMealDto input)
+        {
+            CheckCreatePermission();
+            //we can use Logger, it's defined in ApplicationService class.
+            Logger.Info("Creating a meal for input: " + input);
+
+#if WRONG
+            // Creating a new Meal entity with given input's properties
+            MapToEntity(input, null);
+#else
+            var user = await GetCurrentUserAsync();
+            // Creating a new Meal entity with given input's properties
+            var meal = MapToEntity(input, user);
+#endif
+        }
+
+        public async void SaveValidatedObject(CreateMealDto input)
+        {
+            CheckCreatePermission();
+            //we can use Logger, it's defined in ApplicationService class.
+            Logger.Info("Creating a meal for input: " + input);
+
+#if WRONG
+            throw new NotImplementedException();
+#else
+            var user = await GetCurrentUserAsync();
+
+            // Creating a new Meal entity with given input's properties
+            var meal = MapToEntity(input, user);
+
+            // Saving entity with standard insert method of repositories
+            var result = await Repository.InsertAsync(meal);
+#endif
+        }
+        public async Task<int> CheckIdSavedValidatedObject(CreateMealDto input)
+        {
+            CheckCreatePermission();
+            //we can use Logger, it's defined in ApplicationService class.
+            Logger.Info("Creating a meal for input: " + input);
+
+            var user = await GetCurrentUserAsync();
+
+            // Creating a new Meal entity with given input's properties
+            var meal = MapToEntity(input, user);
+
+            // Saving entity with standard insert method of repositories
+            var result = await Repository.InsertAndGetIdAsync(meal);
+
+#if WRONG
+            result--; // get previous
+#endif
+            return result;
+        }
     }
 }
