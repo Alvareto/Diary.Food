@@ -26,6 +26,8 @@ namespace Diary.Domain
             _ingredientRepository = ingredientRepository;
         }
 
+        #region APP SERVICE METHODS
+
         public override async Task<MealDto> Get(EntityDto<int> input)
         {
             CheckGetPermission();
@@ -122,6 +124,8 @@ namespace Diary.Domain
 
             await Repository.DeleteAsync(meal);
         }
+
+        #endregion
 
         #region VALIDATIONS
 

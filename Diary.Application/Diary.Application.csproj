@@ -239,6 +239,7 @@
     <Compile Include="Domain\IngredientAppService.cs" />
     <Compile Include="Domain\Dto\IngredientDto.cs" />
     <Compile Include="Domain\INutritionFactAppService.cs" />
+    <Compile Include="Domain\ITestingHomework.cs" />
     <Compile Include="Domain\MealAppService.cs" />
     <Compile Include="Domain\Dto\MealDto.cs" />
     <Compile Include="Domain\NutritionFactAppService.cs" />

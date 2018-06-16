@@ -9,13 +9,4 @@ namespace Diary.Domain
         Task<MealDto> UpdateWithNames(UpdateMealDto input);
         
     }
-
-    public interface ITestingHomework
-    {
-        void ValidateObject(CreateMealDto input);
-
-        void SaveValidatedObject(CreateMealDto input);
-
-        Task<int> CheckIdSavedValidatedObject(CreateMealDto input);
-    }
 }
